@@ -24,18 +24,6 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 
-/**
- * struct levelorder_queue_s - Level order traversal queue.
- * @node: A node of a binary tree.
- * @next: The next node to traverse to in the binary tree.
- */
-typedef struct levelorder_queue_s
-{
-	binary_tree_t *node;
-	struct levelorder_queue_s *next;
-} levelorder_queue_t;
-
-
 typedef struct binary_tree_s binary_tree_t;
 
 /* Binary Search Tree */
@@ -46,6 +34,17 @@ typedef struct binary_tree_s avl_t;
 
 /* Max Binary Heap */
 typedef struct binary_tree_s heap_t;
+
+/**
+ * struct levelorder_queue_s - Level order traversal queue.
+ * @node: A node of a binary tree.
+ * @next: The next node to traverse to in the binary tree.
+ */
+typedef struct levelorder_queue_s
+{
+	binary_tree_t *node;
+	struct levelorder_queue_s *next;
+} levelorder_queue_t;
 
 /* Print function */
 void binary_tree_print(const binary_tree_t *);

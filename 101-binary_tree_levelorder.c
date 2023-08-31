@@ -51,7 +51,8 @@ void free_queue(levelorder_queue_t *head)
  * @head: A double pointer to the head of the queue.
  * @tail: A double pointer to the tail of the queue.
  * @func: A pointer to the function to call on @node.
- * Description: Upon malloc failure, exits with code of 1.
+ *
+ * Description: Upon malloc failure, exits with a status code of 1.
  */
 void pint_push(binary_tree_t *node, levelorder_queue_t *head,
 		levelorder_queue_t **tail, void (*func)(int))
@@ -97,7 +98,8 @@ void pop(levelorder_queue_t **head)
 }
 
 /**
- * binary_tree_levelorder - Traverses using level-order traversal.
+ * binary_tree_levelorder - Traverses a binary tree using
+ *                          level-order traversal.
  * @tree: A pointer to the root node of the tree to traverse.
  * @func: A pointer to a function to call for each node.
  */
